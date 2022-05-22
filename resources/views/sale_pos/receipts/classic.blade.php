@@ -324,8 +324,8 @@ body  {
 						  @if(!empty($line['image']))
 							  <img src="{{$line['image']}}" alt="Image" width="50" style="float: left; margin-right: 8px;">
 						  @endif
-						  {{$line['name']}} {{$line['product_variation']}} {{$line['variation']}} 
-						  @if(!empty($line['sub_sku'])), {{$line['sub_sku']}} @endif @if(!empty($line['brand'])), {{$line['brand']}} @endif @if(!empty($line['cat_code'])), {{$line['cat_code']}}@endif
+						  @if(!empty($line['sub_sku'])), {{$line['sub_sku']}} @endif @if(!empty($line['brand'])) {{$line['brand']}} - @endif @if(!empty($line['cat_code'])), {{$line['cat_code']}}@endif
+						  {{$line['name']}} {{$line['product_variation']}} {{$line['variation']}}
 						  @if(!empty($line['product_custom_fields'])), {{$line['product_custom_fields']}} @endif
 						  @if(!empty($line['sell_line_note']))
 						  <br>
@@ -355,7 +355,7 @@ body  {
 						  <tr>
 							  <td>
 								  {{$modifier['name']}} {{$modifier['variation']}} 
-								  @if(!empty($modifier['sub_sku'])), {{$modifier['sub_sku']}} @endif @if(!empty($modifier['cat_code'])), {{$modifier['cat_code']}}@endif
+								  @if(!empty($modifier['sub_sku'])), {{$modifier['sub_sku']}} @endif @if(!empty($modifier['name'])), {{$modifier['cat_code']}}@endif
 								  @if(!empty($modifier['sell_line_note']))({{$modifier['sell_line_note']}}) @endif 
 							  </td>
 							  <td class="text-center">{{$modifier['quantity']}} {{$modifier['units']}} </td>
